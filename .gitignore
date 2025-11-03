@@ -1,0 +1,26 @@
+# Node modules
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Environment / secrets
+.env
+.env.local
+.env.development
+.env.production
+
+# Build outputs
+/client/myapp/build/
+/dist
+/build
+
+# OS / editor files
+.DS_Store
+.vscode/
+
+# Logs
+logs
+*.log
+
+# Coverage / test
+coverage/

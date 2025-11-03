@@ -1,0 +1,106 @@
+.bread {
+    background-color: #006bc978;
+}
+.bread h1 {
+    color: white;
+    padding: 25px 0;
+    text-align: center;
+    font-size: 29px;
+}
+
+.bx_shadow {
+    box-shadow: 2px 2px 6px 3px #006bc92d;
+    padding: 20px;
+}
+
+.aboutus p {
+    text-align: justify;
+    line-height: 27px;
+}
+.aboutus h2 {
+    color: #006bc9b1;
+    padding-bottom: 20px;
+}
+.aboutus h3 {
+    color: #006bc978;
+}
+
+.services h2 {
+    font-size: medium;
+    font-weight: 900;
+    color: #006bc9b1;
+}
+.services ul {
+    list-style: none;
+    padding: 0;
+}
+.services li {
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.serviceCard {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 20px;
+    height: 100%;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    font-size: 14px;
+    line-height: 22px;
+}
+.serviceCard h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #006bc978;
+}
+.serviceCard p {
+    font-size: 14px;
+    margin: 0;
+    color: #444;
+}
+.serviceCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.services h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+.offers {
+    padding: 30px 0;
+}
+.offers h2 {
+    color: #006bc9b1;
+    margin-bottom: 20px;
+}
+
+.bookForm input,
+.bookForm textarea {
+    font-size: 14px;
+    padding: 10px;
+}
+.bookForm button {
+    background-color: #006bc9b1;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    width: 100%;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: background 0.3s ease;
+}
+.bookForm button:hover {
+    background-color: #005a9e;
+}
+
+.bookButtonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}

@@ -1,0 +1,97 @@
+.bread {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* centers heading */
+    position: relative;
+    background-color: #006bc978;
+    padding: 25px 0; /* vertical spacing */
+}
+
+.bread h1 {
+    margin: 0;
+    font-size: 29px;
+    color: white;
+    text-align: center;
+}
+
+/* Logout button on the right */
+.bread .logoutBtn {
+    position: absolute;
+    right: 32px; /* position button on the right */
+    top: 50%;
+    transform: translateY(-50%); /* vertically center button */
+}
+
+.bx_shadow {
+    box-shadow: 2px 2px 6px 3px #006bc92d;
+    padding: 20px;
+}
+
+a {
+    font-weight: 500;
+    text-decoration: none;
+    color: #000;
+}
+
+ul li {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.adminsidebar li a:hover {
+    color: #006bc9bb;
+}
+
+textarea {
+    height: 150px;
+}
+
+/* Ensure tables fit without horizontal scroll */
+.table {
+    width: 100% !important;
+    table-layout: fixed !important;
+    border-collapse: collapse !important;
+}
+
+.table td,
+.table th {
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+/* Keep the Actions column consistent and compact */
+.table td:last-child,
+.table th:last-child {
+    text-align: center;
+    width: 80px; /* narrower, fits icon well */
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+/* Center icons in Actions column */
+.table td:last-child button,
+.table td:last-child .MuiIconButton-root {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Prevent layout shift from DataTables overflow */
+.dataTables_wrapper {
+    width: 100% !important;
+    overflow-x: hidden !important;
+}
+
+/* Keep full layout inside viewport */
+section[class*='services'] .container,
+section[class*='services'] .row {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    margin: 0;
+    padding: 0;
+}
+
+/* Fallback fix for tiny scroll gaps */
+body {
+    overflow-x: hidden !important;
+}
