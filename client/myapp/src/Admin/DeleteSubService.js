@@ -14,7 +14,7 @@ const DeleteSubService = () => {
     // Fetch subservices
     useEffect(() => {
         axios
-            .get('http://localhost:4000/subservice')
+            .get('https://sigmainfotech.onrender.com/subservice')
             .then((res) => {
                 setData(res.data.message);
             })

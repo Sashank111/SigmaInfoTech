@@ -10,7 +10,7 @@ const SubServices = () => {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:4000/service/${sid}`)
+            .get(`https://sigmainfotech.onrender.com/service/${sid}`)
             .then((res) => {
                 setData(res.data.message);
             })
@@ -19,7 +19,7 @@ const SubServices = () => {
             });
 
         axios
-            .get(`http://localhost:4000/subservicename/${sname}`)
+            .get(`https://sigmainfotech.onrender.com/subservicename/${sname}`)
             .then((res) => {
                 setData1(res.data.message);
             })

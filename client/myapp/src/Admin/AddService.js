@@ -7,7 +7,7 @@ const AddService = () => {
     const addServiceData = (e) => {
         e.preventDefault();
         axios
-            .post('http://localhost:4000/service', { sname, description })
+            .post('https://sigmainfotech.onrender.com/service', { sname, description })
             .then((res) => {
                 if (res.data.status === 'success') {
                     alert('Record Inserted');

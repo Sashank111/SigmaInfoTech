@@ -10,7 +10,7 @@ const Admin = () => {
     const adminLogin = (e) => {
         e.preventDefault();
         axios
-            .post('http://localhost:4000/login', {
+            .post('https://sigmainfotech.onrender.com/login', {
                 email,
                 password,
             })

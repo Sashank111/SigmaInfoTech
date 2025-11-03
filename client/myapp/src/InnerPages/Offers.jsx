@@ -7,7 +7,7 @@ const Offers = () => {
 
     useEffect(() => {
         axios
-            .get('http://localhost:4000/offer')
+            .get('https://sigmainfotech.onrender.com/offer')
             .then((res) => {
                 if (
                     res.data.status === 'success' &&

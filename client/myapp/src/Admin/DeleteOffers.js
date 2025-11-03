@@ -13,7 +13,7 @@ const DeleteOffers = () => {
 
     useEffect(() => {
         axios
-            .get('http://localhost:4000/offer')
+            .get('https://sigmainfotech.onrender.com/offer')
             .then((res) => {
                 if (Array.isArray(res.data.message)) setData(res.data.message);
                 else setData([]);

@@ -12,7 +12,7 @@ const EditSubService = () => {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:4000/subservice/${sid}`)
+            .get(`https://sigmainfotech.onrender.com/subservice/${sid}`)
             .then((res) => {
                 const data = res.data.message;
                 setSname(data.sname);
@@ -27,7 +27,7 @@ const EditSubService = () => {
     const editSubServiceData = (e) => {
         e.preventDefault();
         axios
-            .put(`http://localhost:4000/subservice/${sid}`, {
+            .put(`https://sigmainfotech.onrender.com/subservice/${sid}`, {
                 sname,
                 subsname,
                 description,

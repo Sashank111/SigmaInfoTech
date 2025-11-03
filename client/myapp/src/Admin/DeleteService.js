@@ -13,7 +13,7 @@ const DeleteService = () => {
 
     useEffect(() => {
         axios
-            .get('http://localhost:4000/service')
+            .get('https://sigmainfotech.onrender.com/service')
             .then((res) => {
                 setData(res.data.message);
             })

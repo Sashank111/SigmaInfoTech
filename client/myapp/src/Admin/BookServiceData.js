@@ -13,7 +13,7 @@ const BookServiceData = () => {
 
     const fetchBookings = () => {
         axios
-            .get('http://localhost:4000/bookservice')
+            .get('https://sigmainfotech.onrender.com/bookservice')
             .then((res) => {
                 console.log('Bookings response:', res.data);
 

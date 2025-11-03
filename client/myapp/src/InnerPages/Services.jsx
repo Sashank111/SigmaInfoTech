@@ -8,7 +8,7 @@ const Services = ({ hideBreadcrumbs }) => {
 
     useEffect(() => {
         axios
-            .get('http://localhost:4000/service')
+            .get('https://sigmainfotech.onrender.com/service')
             .then((res) => {
                 if (Array.isArray(res.data.message)) {
                     setData(res.data.message);

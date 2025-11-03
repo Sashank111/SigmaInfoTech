@@ -13,7 +13,7 @@ const ContactUs = () => {
     const contactusdata = (e) => {
         e.preventDefault();
         axios
-            .post('http://localhost:4000/contactus', {
+            .post('https://sigmainfotech.onrender.com/contactus', {
                 name,
                 email,
                 phone,

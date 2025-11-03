@@ -9,7 +9,7 @@ const EditService = () => {
     const navigate = useNavigate();
     useEffect(() => {
         axios
-            .get(`http://localhost:4000/service/${sid}`)
+            .get(`https://sigmainfotech.onrender.com/service/${sid}`)
             .then((res) => {
                 setSname(res.data.message.sname);
                 setDescription(res.data.message.description);

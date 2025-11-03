@@ -27,7 +27,7 @@ const BookServices = () => {
         if (sId) {
             // Fetch service name using sId
             axios
-                .get(`http://localhost:4000/service/${sId}`)
+                .get(`https://sigmainfotech.onrender.com/service/${sId}`)
                 .then((res) => {
                     setServiceName(res.data.message.sname || 'Unknown Service');
                 })
@@ -54,7 +54,7 @@ const BookServices = () => {
 
         // Post to backend
         axios
-            .post('http://localhost:4000/bookservice', payload)
+            .post('https://sigmainfotech.onrender.com/bookservice', payload)
             .then((res) => {
                 alert(
                     res.data.status === 'success'

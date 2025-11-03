@@ -12,7 +12,7 @@ const Register = () => {
   const addRegister = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:4000/register", {
+      .post("https://sigmainfotech.onrender.com/register", {
         name,
         email,
         password,

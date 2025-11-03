@@ -7,7 +7,7 @@ const StudentData = () => {
   const [studentdata, setStudentdata] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:4000/student/")
+    axios.get("https://sigmainfotech.onrender.com/student/")
       .then(res => {
         console.log(res);
         setStudentdata(res.data);

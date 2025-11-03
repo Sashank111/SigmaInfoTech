@@ -8,7 +8,7 @@ const AddSubService = () => {
     const addServiceData = (e) => {
         e.preventDefault();
         axios
-            .post('http://localhost:4000/subservice', { sname,subsname,description })
+            .post('https://sigmainfotech.onrender.com/subservice', { sname,subsname,description })
             .then(() => {
                 alert('Service Added Successfully');
                 setSname('');

@@ -11,7 +11,7 @@ const AddOffers = () => {
     const addOfferData = (e) => {
         e.preventDefault();
         axios
-            .post('http://localhost:4000/offer', {
+            .post('https://sigmainfotech.onrender.com/offer', {
                 title,
                 description,
                 discount,

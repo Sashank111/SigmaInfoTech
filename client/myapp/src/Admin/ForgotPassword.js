@@ -18,7 +18,7 @@ const ForgotPassword = () => {
     }
 
     axios
-      .post("http://localhost:4000/forgot-password", { email, password })
+      .post("https://sigmainfotech.onrender.com/forgot-password", { email, password })
       .then((res) => {
         if (res.data.status === "success") {
           alert(res.data.message);

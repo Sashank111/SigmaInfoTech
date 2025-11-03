@@ -14,7 +14,7 @@ const EditOffers = () => {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:4000/offer/${id}`)
+            .get(`https://sigmainfotech.onrender.com/offer/${id}`)
             .then((res) => {
                 const offer = res.data.message;
                 setTitle(offer.title);
