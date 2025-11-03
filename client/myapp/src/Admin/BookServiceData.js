@@ -15,7 +15,7 @@ const BookServiceData = () => {
         axios
             .get('https://sigmainfotech.onrender.com/bookservice')
             .then((res) => {
-                console.log('Bookings response:', res.data); // ✅ console log instead of alert
+                console.log('Bookings response:', res.data); // ✅ log only, no alert
 
                 let bookings = [];
                 if (Array.isArray(res.data)) bookings = res.data;
@@ -23,21 +23,24 @@ const BookServiceData = () => {
                     bookings = res.data.message;
 
                 setData(bookings);
-
-                // ✅ Initialize DataTable only after data is set
-                setTimeout(() => {
-                    if ($.fn.DataTable.isDataTable('#bookServiceTable')) {
-                        $('#bookServiceTable').DataTable().destroy();
-                    }
-                    $('#bookServiceTable').DataTable();
-                }, 300);
             })
             .catch((err) => console.error('Error fetching booking data:', err));
     };
 
+    // ✅ Fetch data once on mount
     useEffect(() => {
         fetchBookings();
     }, []);
+
+    // ✅ Initialize DataTable only when data exists
+    useEffect(() => {
+        if (data.length > 0) {
+            if ($.fn.DataTable.isDataTable('#bookServiceTable')) {
+                $('#bookServiceTable').DataTable().destroy();
+            }
+            $('#bookServiceTable').DataTable();
+        }
+    }, [data]);
 
     const deleteBookServiceData = (id) => {
         if (!window.confirm('Are you sure you want to delete this booking?'))
@@ -47,7 +50,7 @@ const BookServiceData = () => {
             .delete(`https://sigmainfotech.onrender.com/bookservice/${id}`)
             .then((res) => {
                 if (res.data.status === 'success') {
-                    console.log('Booking deleted successfully'); // ✅ log only
+                    console.log('Booking deleted successfully'); // ✅ log instead of alert
                     setData((prev) => prev.filter((item) => item._id !== id));
                 } else {
                     console.error(
