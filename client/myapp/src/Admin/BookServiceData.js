@@ -15,7 +15,7 @@ const BookServiceData = () => {
         axios
             .get('https://sigmainfotech.onrender.com/bookservice')
             .then((res) => {
-                console.log('Bookings response:', res.data);
+                console.log('Bookings response:', res.data); // 🔹 changed (console instead of alert)
 
                 let bookings = [];
                 if (Array.isArray(res.data)) bookings = res.data;
@@ -24,7 +24,7 @@ const BookServiceData = () => {
 
                 setData(bookings);
             })
-            .catch(() => alert('Error fetching booking data'));
+            .catch((err) => console.error('Error fetching booking data:', err)); // 🔹 changed
     };
 
     useEffect(() => {
@@ -42,16 +42,19 @@ const BookServiceData = () => {
             return;
 
         axios
-            .delete(`http://localhost:4000/bookservice/${id}`)
+            .delete(`https://sigmainfotech.onrender.com/bookservice/${id}`) // 🔹 changed (live backend URL)
             .then((res) => {
                 if (res.data.status === 'success') {
-                    alert('Booking Deleted Successfully');
+                    console.log('Booking deleted successfully'); // 🔹 changed
                     setData((prev) => prev.filter((item) => item._id !== id));
                 } else {
-                    alert(res.data.message || 'Failed to delete booking');
+                    console.error(
+                        'Failed to delete booking:',
+                        res.data.message || 'Unknown error'
+                    ); // 🔹 changed
                 }
             })
-            .catch(() => alert('Error deleting booking'));
+            .catch((err) => console.error('Error deleting booking:', err)); // 🔹 changed
     };
 
     return (
