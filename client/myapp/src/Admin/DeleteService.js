@@ -24,7 +24,7 @@ const DeleteService = () => {
             $(function () {
                 new DataTable('#mytable');
             });
-        }, 200);
+        }, 1000);
     }, []);
 
     const deleteServiceData = (sid) => {
