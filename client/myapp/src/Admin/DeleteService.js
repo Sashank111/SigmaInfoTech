@@ -29,7 +29,7 @@ const DeleteService = () => {
 
     const deleteServiceData = (sid) => {
         axios
-            .delete(`http://localhost:4000/service/${sid}`)
+            .delete(`https://sigmainfotech.onrender.com/service/${sid}`)
             .then(() => {
                 alert('Service Deleted Successfully');
                 setData(data.filter((service) => service._id !== sid));
