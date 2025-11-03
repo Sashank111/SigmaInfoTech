@@ -40,7 +40,7 @@ const BookServiceData = () => {
             }
             $('#bookServiceTable').DataTable();
         }
-    }, [data]);
+    }, 1000);
 
     const deleteBookServiceData = (id) => {
         if (!window.confirm('Are you sure you want to delete this booking?'))
