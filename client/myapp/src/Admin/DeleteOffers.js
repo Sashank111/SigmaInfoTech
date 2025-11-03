@@ -24,7 +24,7 @@ const DeleteOffers = () => {
             $(function () {
                 new DataTable('#offerTable');
             });
-        }, 200);
+        }, 1000);
     }, []);
 
     const deleteOfferData = (id) => {
