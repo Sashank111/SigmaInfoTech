@@ -15,7 +15,7 @@ const BookServiceData = () => {
         axios
             .get('https://sigmainfotech.onrender.com/bookservice')
             .then((res) => {
-                console.log('Bookings response:', res.data); // 🔹 changed (console instead of alert)
+                console.log('Bookings response:', res.data); // ✅ console log instead of alert
 
                 let bookings = [];
                 if (Array.isArray(res.data)) bookings = res.data;
@@ -23,18 +23,20 @@ const BookServiceData = () => {
                     bookings = res.data.message;
 
                 setData(bookings);
+
+                // ✅ Initialize DataTable only after data is set
+                setTimeout(() => {
+                    if ($.fn.DataTable.isDataTable('#bookServiceTable')) {
+                        $('#bookServiceTable').DataTable().destroy();
+                    }
+                    $('#bookServiceTable').DataTable();
+                }, 300);
             })
-            .catch((err) => console.error('Error fetching booking data:', err)); // 🔹 changed
+            .catch((err) => console.error('Error fetching booking data:', err));
     };
 
     useEffect(() => {
         fetchBookings();
-
-        setTimeout(() => {
-            $(function () {
-                new DataTable('#bookServiceTable');
-            });
-        }, 300);
     }, []);
 
     const deleteBookServiceData = (id) => {
@@ -42,19 +44,19 @@ const BookServiceData = () => {
             return;
 
         axios
-            .delete(`https://sigmainfotech.onrender.com/bookservice/${id}`) // 🔹 changed (live backend URL)
+            .delete(`https://sigmainfotech.onrender.com/bookservice/${id}`)
             .then((res) => {
                 if (res.data.status === 'success') {
-                    console.log('Booking deleted successfully'); // 🔹 changed
+                    console.log('Booking deleted successfully'); // ✅ log only
                     setData((prev) => prev.filter((item) => item._id !== id));
                 } else {
                     console.error(
                         'Failed to delete booking:',
                         res.data.message || 'Unknown error'
-                    ); // 🔹 changed
+                    );
                 }
             })
-            .catch((err) => console.error('Error deleting booking:', err)); // 🔹 changed
+            .catch((err) => console.error('Error deleting booking:', err));
     };
 
     return (
