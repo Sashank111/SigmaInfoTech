@@ -6,10 +6,11 @@ const subServiceRouter = require('./router/subServiceRouting');
 const bookServiceRouter = require('./router/bookServiceRouter');
 const contactUsRouter = require('./router/contactusRouting');
 const offerRouter = require('./router/offerRouting');
-require('./dbconfig/dbconfig');
+require('dotenv').config(); // Load .env before database connection
+require('./dbconfig/dbconfig'); // Connect to MongoDB Atlas
 
 const app = express();
-const port = 4000;
+const port = process.env.PORT || 4000;
 
 // Middleware
 app.use(cors());
@@ -21,7 +22,7 @@ app.use('/', serviceRouter);
 app.use('/', subServiceRouter);
 app.use('/', bookServiceRouter);
 app.use('/', contactUsRouter);
-app.use('/', offerRouter); // new line
+app.use('/', offerRouter);
 
 // Server start
 app.listen(port, () => {

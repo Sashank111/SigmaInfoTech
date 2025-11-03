@@ -1,15 +1,16 @@
+require('dotenv').config();
 const mongoose = require('mongoose');
 
-// Connect to local MongoDB 'dbpractice' database
-const conUrl = "mongodb://127.0.0.1:27017/dbpractice";
+const uri = process.env.MONGODB_URI;
 
-mongoose.connect(conUrl, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
-.then(() => {
-  console.log('MongoDB connected successfully to dbpractice');
-})
-.catch(err => {
-  console.error('Connection error:', err);
-});
+mongoose
+    .connect(uri, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+    })
+    .then(() => {
+        console.log('✅ Connected to MongoDB Atlas');
+    })
+    .catch((err) => {
+        console.error('❌ Connection error:', err);
+    });
