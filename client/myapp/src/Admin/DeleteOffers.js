@@ -32,7 +32,7 @@ const DeleteOffers = () => {
             return;
 
         axios
-            .delete(`http://localhost:4000/offer/${id}`)
+            .delete(`https://sigmainfotech.onrender.com/offer/${id}`)
             .then((res) => {
                 if (res.data.status === 'success') {
                     alert('Offer Deleted Successfully');
