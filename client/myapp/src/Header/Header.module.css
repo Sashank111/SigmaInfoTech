@@ -1,47 +1,47 @@
 .headers {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .headers ul {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;   /* keeps nav items aligned to the right */
-  gap: 28px;                   /* comfortable spacing between links */
-  flex: 1;
-  margin-top: 10px;            /* 🔹 lowers nav slightly to align with logo */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* keeps nav items aligned to the right */
+    gap: 28px; /* comfortable spacing between links */
+    flex: 1;
+    margin-top: 10px; /* 🔹 lowers nav slightly to align with logo */
 }
 
 .headers .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .headers ul li a {
-  text-transform: uppercase;
-  font-size: 18px;
-  letter-spacing: 0.6px;
-  padding: 12px 22px;          /* increases clickable area */
-  color: #000;
-  transition: color 0.3s ease;
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 0.6px;
+    padding: 12px 22px; /* increases clickable area */
+    color: #000;
+    transition: color 0.3s ease;
 }
 
 .headers ul li a:hover {
-  color: #007bff;
-  text-decoration: none;
+    color: #007bff;
+    text-decoration: none;
 }
 
 /* 🔹 Logo sizing + centering */
 .logo {
-  height: 54px;                /* slightly larger for better presence */
-  width: auto;
-  margin: 0 auto;
-  display: block;
-  transition: transform 0.25s ease-in-out;
-  padding: 6px 10px;           /* small padding around logo */
+    height: 54px; /* slightly larger for better presence */
+    width: auto;
+    margin: 0 auto;
+    display: block;
+    transition: transform 0.25s ease-in-out;
+    padding: 6px 10px; /* small padding around logo */
 }
 
 .logo:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
